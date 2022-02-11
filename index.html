@@ -57,7 +57,7 @@
                     </button>
                     <p class="modal-name">Оставьте свои данные, мы вам перезвоним</p>
                     <form action="signup_user" autocomplete="on">
-                        <!-- <div class="name-input-icon"> -->
+                        <div class="name-input-icon">
                         <label class="title-input-window" for="user_name">Имя
                             <span class="modal-input-line">
                                 <input class="modal-input" type="name" name="username" placeholder=""/>
@@ -66,7 +66,8 @@
                                 </svg>
                             </span>
                         </label>
-                        <!-- </div> -->
+                        </div>
+                        <div class="name-input-icon">
                         <label class="title-input-window" for="user_phone">Телефон
                             <span class="modal-input-line">
                                 <input class="modal-input" type="phone" name="username" placeholder="" />
@@ -75,6 +76,8 @@
                                 </svg>
                             </span>
                         </label>
+                        </div>
+                        <div class="name-input-icon">
                         <label class="title-input-window" for="user_email">Почта
                             <span class="modal-input-line">
                                 <input class="modal-input" type="email" name="usermail" placeholder="" />
@@ -83,10 +86,18 @@
                                     </svg>
                             </span>
                         </label>
+                        </div>
                     </form>
-                    <label class="title-input-window" for="comment">Комментарий
-                        <input class="modal-text" type="user-text" name="comment" placeholder="Введите текст" />
-                    </label>
+                    <div class="window-user-text">
+                        <label class="title-input-window" for="comment">Комментарий
+                        <textarea
+                            name="comment"
+                            id="user-text"
+                            class="comment"
+                            placeholder="Введите текст">
+                        </textarea>
+                        </label>
+                    </div>                    
                     <label class="check-box">
                         <input type="checkbox" name="checkform" value="checked" checked /> Соглашаюсь с рассылкой и принимаю <a href="#"
                             class="check-box-second">Условия договора</a>
