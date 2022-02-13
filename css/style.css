@@ -53,6 +53,14 @@ body {
     padding-bottom: 94px;
     padding-top: 94px;
 }
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+
 .logo {
     font-family: "Raleway", sans-serif;
     font-weight: 700;
@@ -289,63 +297,105 @@ body {
 .modal-close {
     fill: currentColor;
 }
-.name-input-icon {
-    margin-bottom: 10px;
+.input-icon {
+    position: relative;
 }
 .title-input-window {
     font-size: 12px;
-    line-height: 14px;
+    line-height: calc(14 / 12);
     letter-spacing: 0.01em;
     color: var(--text-color);
+    display: block;
+    margin-bottom: 4px;
 }
 .modal-input-line {
-    position: relative;
+    margin-bottom: 10px;
 }
 .modal-line-icon {
     position: absolute;
+    left: 12px;
     top: 50%;
     transform: translateY(-50%);
-    left: 12px;
     fill: var(--img-title-color);
+    transition-delay: 250ms;
+    transition-property: color;
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    color: var(--accent-color);
 }
+.modal-line-icon:focus {
+    fill: currentColor;
+}
+
 .check-box {
-    width: 425px;
+    width: 100%;
     height: 24px;
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: var(--text-color);
+    display: flex;
+    align-items: center;
 }
+.check-box span {
+    width: 16px;
+    height: 15px;
+    border: 2px solid var(--border-item-color);
+    border-radius: 2px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-right: 5px;
+}
+
 .check-box-second {
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: var(--accent-color);
 }
+/* .check-form {
+    appearance: none;
+    -webkit-appearance: none;
+} */
+.checkbox-icon {
+    fill: transparent;
+}
+.check-form:checked + .check-box > span {
+    background-color: var(--accent-color);
+    border: none;
+}
+.check-form:checked + .check-box .checkbox-icon {
+    fill: var(--hero-btntxt-color);
+}
 .modal-input {
-    width: 448px;
+    width: 100%;
     height: 40px;
     outline: none;
     padding: 11px 12px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     padding-left: 42px;
-    transition-duration: 250ms;
-    transition-property: border-color, color;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-/* .modal-input:focus + .modal-line-icon {
+.modal-input:focus {
     border-color: var(--accent-color);
+}
+.modal-input:focus + .modal-line-icon {
     fill: var(--accent-color);
-} */
+}
+
 .comment {
     width: 100%;
     height: 120px;
-    /* border: 1px solid rgba(33, 33, 33, 0.2); */
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+    border: 1px solid rgba(33, 33, 33, 0.2);
     padding: 12px 16px;
     border-radius: 4px;
     margin-bottom: 20px;
     resize: none;
+    outline: none;
 }
 .comment:focus {
     border-color: var(--accent-color);
@@ -664,7 +714,39 @@ body {
 .footer-social-link:focus .social-icon {
     fill: #ffffff;
 }
-
+.subscription-news {
+    margin-left: 93px;
+}
+.subscription-form {
+    display: flex;
+    align-items: baseline;
+}
+.footer-submit-button {
+    display: flex;
+    position: relative;
+    margin-left: 12px;
+    align-items: center;
+    justify-content: center;
+}
+.submit-button {
+    margin-top: 0;
+    margin-right: 10px;
+}
+.footer-input {
+    width: 358px;
+    height: 50px;
+    outline: none;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background-color: transparent;
+    padding: 15px 16px;
+}
+.submit-icon {
+    position: absolute;
+    right: 28px;
+    fill: var(--hero-btntxt-color);
+}
 /*-- Разметка страницы Portfolio --*/
 
 .button-list {
@@ -714,13 +796,7 @@ body {
     letter-spacing: 0.03em;
     color: var(--text-color);
 }
-.visually-hidden {
-    position: absolute;
-    clip: rect(0 0 0 0);
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-}
+
 .img-list {
     display: flex;
     flex-wrap: wrap;
