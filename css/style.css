@@ -368,6 +368,10 @@ body {
 .check-form:checked + .check-box .checkbox-icon {
     fill: var(--hero-btntxt-color);
 }
+.check-form:focus + .check-box > span {
+    border: 3px solid var(--accent-color);
+    border-radius: 4px;
+}
 .modal-input {
     width: 100%;
     height: 40px;
@@ -377,8 +381,11 @@ body {
     border-radius: 4px;
     padding-left: 42px;
 }
-.check-form:focus + .check-box > span {
+.modal-input:focus {
     border-color: var(--accent-color);
+}
+.modal-input:focus + .modal-line-icon {
+    fill: var(--accent-color);
 }
 
 .comment {
