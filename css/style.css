@@ -377,11 +377,8 @@ body {
     border-radius: 4px;
     padding-left: 42px;
 }
-.modal-input:focus {
+.check-form:focus + .check-box > span {
     border-color: var(--accent-color);
-}
-.modal-input:focus + .modal-line-icon {
-    fill: var(--accent-color);
 }
 
 .comment {
