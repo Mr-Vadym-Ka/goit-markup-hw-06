@@ -289,8 +289,10 @@ body {
     background: #ffffff;
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
-.button-modal-close:hover {
+.button-modal-close:hover,
+.button-modal-close:focus {
     color: var(--accent-color);
+    outline: none;
 }
 .modal-close {
     fill: currentColor;
@@ -305,6 +307,14 @@ body {
     color: var(--text-color);
     display: block;
     margin-bottom: 4px;
+}
+
+.window-user-text {
+    margin-bottom: 20px;
+}
+
+.modal-checkbox {
+    margin-bottom: 30px;
 }
 
 .modal-input-line {
@@ -334,6 +344,7 @@ body {
     color: var(--text-color);
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 .check-box span {
     width: 16px;
@@ -356,6 +367,7 @@ body {
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: var(--accent-color);
+    margin-left: 5px;
 }
 
 .checkbox-icon {
@@ -398,7 +410,7 @@ body {
     border: 1px solid rgba(33, 33, 33, 0.2);
     padding: 12px 16px;
     border-radius: 4px;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     resize: none;
     outline: none;
 }
@@ -406,14 +418,15 @@ body {
     border-color: var(--accent-color);
 }
 .form-button {
+    display: block;
     width: 200px;
     height: 50px;
     border-radius: 4px;
     border-color: transparent;
-    margin: 30px auto auto;
     color: var(--hero-btntxt-color);
     background-color: var(--hero-btnbkg-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    margin: auto;
 }
 
 /*-------Features--------*/
@@ -719,7 +732,7 @@ body {
     fill: #ffffff;
 }
 .subscription-news {
-    margin-left: 98px;
+    margin-left: auto;
     /* display: inline-flex;
     justify-content: flex-end; */
 }
@@ -736,7 +749,7 @@ body {
     padding-left: 28px;
     display: flex;
     align-items: center;
-    margin-top: 0;
+    /* margin-top: 0; */
 }
 .footer-input {
     width: 358px;
@@ -750,8 +763,7 @@ body {
     padding: 15px 16px;
 }
 .submit-icon {
-    position: absolute;
-    right: 28px;
+    margin-left: 10px;
     fill: var(--hero-btntxt-color);
 }
 /*-- Разметка страницы Portfolio --*/
