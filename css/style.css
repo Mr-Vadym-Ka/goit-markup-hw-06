@@ -320,15 +320,13 @@ body {
 .modal-input-line {
     margin-bottom: 10px;
 }
+
 .modal-line-icon {
     position: absolute;
     left: 12px;
     top: 50%;
     transform: translateY(-50%);
     fill: var(--img-title-color);
-    /* transition-delay: 250ms;
-    transition-property: color;
-    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275); */
     color: var(--accent-color);
 }
 .modal-line-icon:focus {
@@ -350,17 +348,17 @@ body {
     width: 16px;
     height: 15px;
     border: 2px solid var(--border-item-color);
-    border-radius: 2px;
+    border-radius: 3px;
     align-items: center;
     justify-content: center;
     display: flex;
     margin-right: 5px;
 }
-.check-box:hover,
+/* .check-box:hover,
 .check-box:hover span {
     color: var(--accent-color);
     border-color: var(--accent-color);
-}
+} */
 
 .check-box-second {
     font-size: 14px;
@@ -380,7 +378,8 @@ body {
 .check-form:checked + .check-box .checkbox-icon {
     fill: var(--hero-btntxt-color);
 }
-.check-form:focus + .check-box > span {
+.check-form:focus + .check-box > span,
+.check-form:hover + .check-box > span {
     border: 3px solid var(--accent-color);
     border-radius: 4px;
 }
@@ -410,7 +409,6 @@ body {
     border: 1px solid rgba(33, 33, 33, 0.2);
     padding: 12px 16px;
     border-radius: 4px;
-    /* margin-bottom: 20px; */
     resize: none;
     outline: none;
 }
@@ -746,10 +744,10 @@ body {
 }
 
 .submit-button {
+    font-weight: 700;
     padding-left: 28px;
     display: flex;
     align-items: center;
-    /* margin-top: 0; */
 }
 .footer-input {
     width: 358px;
